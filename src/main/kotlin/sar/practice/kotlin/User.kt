@@ -8,9 +8,8 @@ import jakarta.persistence.*
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
-class User {
-
-
-
-
-}
+class User(
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Number
+)
