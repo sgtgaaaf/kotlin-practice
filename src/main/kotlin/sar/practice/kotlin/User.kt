@@ -3,13 +3,14 @@ package sar.practice.kotlin
 import lombok.*
 import jakarta.persistence.*
 
+@Builder
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
-class User(
+class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Number
-)
+    lateinit var id: Number
+}
