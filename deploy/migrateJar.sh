@@ -16,7 +16,7 @@ fi
 mkdir -p "$destination_path"
 
 # Move the kotlin-lib folder to the destination directory
-mv "$source_path" "$destination_path"
+mv -f "$source_path" "$destination_path"
 # Move the jar files to the destination directory
 for jar_file in "${jar_files[@]}"; do
   mv "$jar_file" "$destination_path"
